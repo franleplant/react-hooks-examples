@@ -27,7 +27,7 @@ export type CustomSetTimeout = (callback: Callback, ms: number) => void;
   yes, the timers that we need to cleanup
 
  */
-export function useSetTimeout(): CustomSetTimeout {
+export default function useSetTimeout(): CustomSetTimeout {
   const isMounted = useIsMounted();
   const timers = useRef<Array<any>>([]);
 

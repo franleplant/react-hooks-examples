@@ -41,7 +41,7 @@ export type Callback = () => any;
   yes, the callbackRef, the isMounted and the timerId ref
 
  */
-export function useTimeout(callback: Callback, ms: number | undefined) {
+export default function useTimeout(callback: Callback, ms: number | undefined) {
   // Store a stable ref to the callback, we really
   // do not want to reset the timer when the callback changes.
   const callbackRef = useRef(callback);
